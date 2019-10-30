@@ -1,0 +1,16 @@
+<nav id="main-nave">
+        <div class="container">
+        <h1>Conecta<span>App</span></h1>
+        </div>
+          <ul id="menu-items">
+            {% assign pages=site.data.navigation.items %}
+            {% for item in pages %}
+            <li {% if page.url == item.link %}class="active"{% endif %}>
+              <a href="{{ item.link }}">{{ item.name | upcase }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          <img id="toggle-menu" src="/assets/img/menu.png" alt="menu">
+        </div>
+      </nav>
+      
