@@ -1,0 +1,102 @@
+#main-nave {
+
+    box-shadow: 0 0 2px rgb(180, 171, 171);
+    a { text-decoration: none; color: inherit; }
+    width: 100%;
+  
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2em;
+      max-width: 1300px;
+      margin: 0 auto;
+      position: relative;
+    }
+  
+   /* #main-logo {
+      width: 100px;
+      img { width: 100%; }
+      h1 {
+        text-align: center;
+        margin: 5px 0;
+        font-family: $fonts-title;
+        font-size: 1.4rem;
+        color: blue;
+        span {
+          display: block;
+          padding: 0.1em;
+          color: white;
+          background: #00b3ff;
+          border: solid 1px rgb(4, 1, 27);
+          border-radius: 5px;
+        }
+      }
+    }*/
+  
+    $menu-break: 800px;
+  
+    #toggle-menu {
+      display: none;
+      @media (max-width: $menu-break) {
+        display: inline-block;
+        width: 40px;
+      }
+    }
+    
+    ul {
+      padding: 0;
+      max-width: 600px;
+      flex: 1;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+  
+      font-family: $fonts-title;
+      font-size: 1rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+  
+      li {
+        color: rgb(27, 22, 54);
+        &:hover { color: rgb(26, 9, 99);   transition:  1.3s,  transform all 1.3s;}
+        &.active { color: rgb(10, 1, 26); }
+      }
+      @media (max-width: $menu-break) {
+        opacity: 0;
+        display: block;
+        transition: top 0.9s, opacity 0.4s, transform 0.9s;
+        transform: scaleY(0.2);
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        background: white;
+        right: 0;
+        top: -100%;
+        z-index: -20;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+  
+        &.visible {
+          opacity: 1;
+          top: 100%;
+          z-index: 20;
+          transform: none;
+        }
+  
+        li {
+          background: white;
+          box-sizing: border-box;
+          width: 90%;
+          padding: 0.2em 0;
+          margin: 0 1em;
+          border-bottom: solid #999 1px;
+          &:last-child { border: none; }
+        }
+      }
+    }
+  
+  }
+  
