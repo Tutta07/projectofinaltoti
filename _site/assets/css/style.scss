@@ -1,5 +1,6 @@
-@import "variables";
-@import "base";
-@import "includes/navbar";
-@import "includes/footer";
-@import "includes/form";
+
+@import "/_data/_sass/base.scss";
+@import "/_data/_sass/variables.scss";
+@import "/_data/_sass/_includes/footer.scss";
+@import "/_data/_sass/_includes/form.scss";
+@import "/_data/_sass/_includes/navegador.scss";
